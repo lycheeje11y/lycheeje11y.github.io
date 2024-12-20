@@ -20,8 +20,9 @@ a {
   transition: all 0.2s;
 }
 
-footer a:link, footer a:visited {
-	color: #FFF;
+footer a:link,
+footer a:visited {
+  color: #fff;
 }
 .tm-text-blue {
   color: #00ccfc;
@@ -182,14 +183,36 @@ footer {
   line-height: 2;
 }
 
-/* Image Gallery */
-.tm-gallery {
-  max-width: 860px;
-  margin: 0 auto;
+/* Side Projects */
+.tm-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.tm-project-item {
+  padding: 1.5rem;
+  border-radius: 10px;
 }
 
-.tm-gallery-item {
-  margin: 0 10px;
+.tm-project-title {
+  color: var(--primary-accent, #00ccfc);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.tm-project-description {
+  color: #c5c7c6;
+  margin-bottom: 1rem;
+}
+.tm-project-link {
+  color: var(--primary-accent, #00ccfc);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.tm-project-link:hover {
+  text-decoration: underline;
+  color: var(--hover-accent, #950000);
 }
 
 .slick-dots {
@@ -339,8 +362,12 @@ figure.effect-goliath p {
   font-size: 1rem;
   padding: 15px 10px;
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition:
+    opacity 0.35s,
+    -webkit-transform 0.35s;
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
   -webkit-transform: translate3d(0, 50px, 0);
   transform: translate3d(0, 50px, 0);
 }
