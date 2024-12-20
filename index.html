@@ -93,10 +93,15 @@ http://www.tooplate.com/view/2109-the-card
                   <p class="mb-0">
                     Ready to get started on this journey? Click "Read More"
                   </p>
+
+                  <a
+                    href="#"
+                    id="tm_about_link"
+                    data-linkid="1"
+                    class="tm-link ml-0"
+                    >Read More</a
+                  >
                 </div>
-                <a href="#" id="tm_about_link" data-linkid="1" class="tm-link"
-                  >Read More</a
-                >
               </section>
 
               <!-- Section 1 About Me -->
@@ -123,9 +128,51 @@ http://www.tooplate.com/view/2109-the-card
                 <h2 class="tm-text-lue mb-4">
                   Check out some of my side projects!
                 </h2>
-
                 <div class="tm-project-list">
-                  <div class="tm-project-item tm-textbox tm-bg-dark">
+                  <div class="tm-project-item tm-bg-dark">
+                    <h3 class="tm-project-title">Tech Memes</h3>
+
+                    <p class="tm-project-description">
+                      I made this so that I can fetch a meme from Programmer
+                      Humor whenever I'm feeling down.
+                    </p>
+
+                    <a
+                      href="https://github.com/lycheeje11y/techmemes"
+                      class="tm-project-link"
+                      target="_blank"
+                      >Repo</a
+                    >
+                  </div>
+                  <div class="tm-project-item tm-bg-dark">
+                    <h3 class="tm-project-title">Project Name 1</h3>
+
+                    <p class="tm-project-description">
+                      Describing the project.
+                    </p>
+
+                    <a
+                      href="https://github.com"
+                      class="tm-project-link"
+                      target="_blank"
+                      >Repo</a
+                    >
+                  </div>
+                  <div class="tm-project-item tm-bg-dark">
+                    <h3 class="tm-project-title">Project Name 1</h3>
+
+                    <p class="tm-project-description">
+                      Describing the project.
+                    </p>
+
+                    <a
+                      href="https://github.com"
+                      class="tm-project-link"
+                      target="_blank"
+                      >Repo</a
+                    >
+                  </div>
+                  <div class="tm-project-item tm-bg-dark">
                     <h3 class="tm-project-title">Project Name 1</h3>
 
                     <p class="tm-project-description">
@@ -362,6 +409,22 @@ http://www.tooplate.com/view/2109-the-card
           },
         });
       }
+
+      // PROJECT SCROLL BAR
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".tm-project-list");
+        const leftArrow = document.querySelector(".left-arrow");
+        const rightArrow = document.querySelector(".right-arrow");
+        const scrollAmount = 300; // pixels
+
+        leftArrow.addEventListener("click", () => {
+          container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+        rightArrow.addEventListener("click", () => {
+          container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+      });
     </script>
   </body>
 </html>
